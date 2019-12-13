@@ -1,0 +1,21 @@
+$primary: teal;
+
+$theme-colors: (
+   "primary": $primary
+);
+
+@import "../node_modules/bootswatch/dist/lux/variables";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootswatch/dist/lux/bootswatch";
+
+.bg-primary {
+   background-color: $primary !important;
+}
+
+body {
+   padding-top: 89px;
+}
+
+.form-control:focus {
+   border: 1px solid $primary;
+}
