@@ -1,0 +1,32 @@
+.banner {
+  width: 100%;
+  background-image: url("../img/face.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #222;
+}
+
+.overlay {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.half {
+  border: solid 10px $primary;
+  border-radius: 1em;
+}
+
+.middle {
+  margin-top: 30%;
+}
+
+.hello {
+  font-size: 14pt;
+  font-weight: 100;
+  font-family: "IBM Plex Sans", Montserrat;
+}
+
+.title {
+  font-size: 18pt;
+  font-family: "IBM Plex Sans";
+}
