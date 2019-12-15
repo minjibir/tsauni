@@ -29,7 +29,17 @@ body {
   background: darken($dark, 7%);
 }
 
+.bg-progress {
+  background-color: lighten($dark, 60%);
+}
+
 .exp {
   height: 100%;
 }
+
+.navbar,
+.btn {
+  font-weight: bold;
+}
+
 @import "hero";
