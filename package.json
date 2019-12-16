@@ -4,6 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "minify": "css-minify -d assets/css/ && cp -r css-dist/*.min.css assets/css/ && rimraf assets/css/style.css && rimraf css-dist",
+    "prebuild": "cp ./node_modules/jquery/dist/jquery.min.js assets/js/ && cp ./node_modules/popper.js/dist/umd/popper.min.js assets/js/ && cp ./node_modules/bootstrap/dist/js/bootstrap.min.js assets/js/ && cp ./node_modules/@fortawesome/fontawesome-free/js/all.min.js assets/js/",
+    "build": "npm run prestart",
+    "postbuild": "mkdirp dist/ && cp -r assets index.html dist/",
+    "prestart": "rimraf assets/css/ && node-sass scss/ -o assets/css/ && npm run minify && npm run prebuild",
     "start": "node-sass --watch scss/ -o assets/css/"
   },
   "keywords": [],
@@ -17,6 +22,9 @@
     "popper.js": "^1.16.0"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "css-minify": "^1.0.1",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.13.0",
+    "rimraf": "^3.0.0"
   }
 }
